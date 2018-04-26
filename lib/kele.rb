@@ -1,10 +1,12 @@
 require "httparty"
 require "json"
 require "./lib/roadmap"
+require "./lib/messages"
 
 class Kele
   include HTTParty
   include Roadmap
+  include Messages
 
   def initialize
     @api_url = 'https://www.bloc.io/api/v1'
