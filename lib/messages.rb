@@ -6,6 +6,6 @@ module Messages
   end
 
   def create_message
-    self.class.post("#{@api_url}/messages", headers: {"authorization" => @auth_token}, body: {"recipient_id" => recipient, "subject" => subject, "stripped-text" => body})
+    self.class.post("#{@api_url}/messages", headers: {"authorization" => @auth_token}, body: {"sender"=> sender, "recipient_id" => recipient, "token" => token, "subject" => subject, "stripped-text" => body})
   end
 end
