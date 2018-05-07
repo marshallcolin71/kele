@@ -26,7 +26,7 @@ class Kele
   end
 
   def get_remaining_checkpoints(chain_id)
-    response = self.class.get("#{@api_url}/enrollment_chains/#{chain_id}/checkpoints_remaining_in_section", headers {"authorization" => @auth_token}).to_json
+    response = self.class.get("#{@api_url}/enrollment_chains/#{chain_id}/checkpoints_remaining_in_section", headers: {"authorization" => @auth_token}).to_json
     @checkpoint_data = JSON.parse(response)
   end
 end
